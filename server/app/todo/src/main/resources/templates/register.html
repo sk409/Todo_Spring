@@ -8,13 +8,14 @@
 </head>
 
 <body>
-    <div layout:fragment="content">
+    <v-container layout:fragment="content">
         <v-card>
             <v-card-title>登録</v-card-title>
             <v-card-text>
                 <v-form ref="form">
                     <v-text-field v-model="username" label="ユーザ名"></v-text-field>
-                    <v-text-field v-model="password" autocomplete type="password" label="パスワード"></v-text-field>
+                    <v-text-field v-model="password" autocomplete="current-password" type="password" label="パスワード">
+                    </v-text-field>
                     <v-text-field v-model="email" type="email" label="メールアドレス"></v-text-field>
                 </v-form>
             </v-card-text>
@@ -22,7 +23,10 @@
                 <v-btn color="accent" class="mx-auto" @click="register">登録</v-btn>
             </v-card-actions>
         </v-card>
-    </div>
+        <div class="text-center mt-3">
+            <v-btn color="primary" href="login" text>アカウントをお持ちの方</v-btn>
+        </div>
+    </v-container>
     <div layout:fragment="scripts">
         <script th:src="@{/js/register.js}" defer></script>
     </div>

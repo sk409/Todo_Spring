@@ -4,6 +4,7 @@ import vuetify from "./vuetify.js";
 import {
     urlRegister
 } from "./urls.js";
+import "./main.js";
 
 new Vue({
     el: "#app",

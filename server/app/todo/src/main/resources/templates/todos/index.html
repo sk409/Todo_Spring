@@ -2,7 +2,7 @@
 <html lang="ja" layout:decorate="~{layouts/app}">
 
 <head>
-    <title>ダッシュボード</title>
+    <title>全てのTODO</title>
 </head>
 
 <body>
@@ -10,10 +10,10 @@
         <navbar-todo></navbar-todo>
     </div>
     <div layout:fragment="content">
-        <!-- <div hidden th:text="${todos}"></div> -->
+        全てのTODO
     </div>
     <div layout:fragment="scripts">
-        <script th:src="@{/js/dashboard.js}"></script>
+        <script th:src="@{/js/todos.index.js}"></script>
     </div>
 </body>
 

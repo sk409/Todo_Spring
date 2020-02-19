@@ -1,5 +1,7 @@
-const jsSrcDir = "./src/main/resources/js/";
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+
+const jsSrcDir = "./src/main/resources/js/";
 
 module.exports = (env, args) => {
     const devmode = args.mode === "development";
@@ -8,7 +10,9 @@ module.exports = (env, args) => {
         entry: {
             app: jsSrcDir + "app.js",
             dashboard: jsSrcDir + "dashboard.js",
+            login: jsSrcDir + "login.js",
             register: jsSrcDir + "register.js",
+            "todos.index": jsSrcDir + "todos.index.js",
         },
         module: {
             rules: [{
@@ -31,7 +35,7 @@ module.exports = (env, args) => {
                 },
                 {
                     test: /\.scss/,
-                    use: ["style-loader", "css-loader", "sass-loader"]
+                    use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
                 }
             ]
         },
@@ -39,7 +43,12 @@ module.exports = (env, args) => {
             filename: "[name].js",
             path: __dirname + "/src/main/resources/static/js"
         },
-        plugins: [new VueLoaderPlugin()],
+        plugins: [
+            new MiniCssExtractPlugin({
+                filename: "../css/[name].css"
+            }),
+            new VueLoaderPlugin()
+        ],
         resolve: {
             extensions: [".js", ".vue"],
             alias: {

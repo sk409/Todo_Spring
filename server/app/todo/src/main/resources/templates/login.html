@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" layout:decorate="~{layouts/app}">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ログイン</title>
 </head>
 
 <body>
-    <form th:object="${registerForm}" th:action="@{/login}" method="post">
-        <p><label>ユーザ名<input type="text" path="username"></label></p>
-        <p><label>パスワード<input type="password" name="password"></label></p>
-        <p><input type="submit" value="ログイン"></p>
-    </form>
+    <v-container layout:fragment="content">
+        <form th:action="@{/login}" method="post">
+            <div><label>ユーザ名<input autocomplete type="text" name="username"></label></div>
+            <div><label>パスワード<input autocomplete="current-password" type="password" name="password"></label></div>
+            <input type="submit" value="ログイン">
+        </form>
+    </v-container>
+    <div layout:fragment="scripts">
+        <script th:src="@{/js/login.js}"></script>
+    </div>
 </body>
 
 </html>

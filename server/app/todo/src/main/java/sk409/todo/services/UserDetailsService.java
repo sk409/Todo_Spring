@@ -16,6 +16,7 @@ public class UserDetailsService implements org.springframework.security.core.use
     }
 
     public User loadUserByUsername(String username) throws UsernameNotFoundException {
+        System.out.println(username);
         if (username == null || "".equals(username)) {
             throw new UsernameNotFoundException("username is empty");
         }

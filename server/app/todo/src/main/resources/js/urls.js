@@ -6,5 +6,6 @@ class Url {
 
 }
 
+export const urlLogin = new Url("login");
 export const urlTodos = new Url("todos");
 export const urlRegister = new Url("register");

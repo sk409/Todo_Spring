@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 @RequestMapping("/todos")
 public class TodosController {
 
-    @GetMapping("/")
+    @GetMapping
     public String index() {
-        return "todos";
+        return "todos/index";
     }
 
-    @PostMapping("/")
+    @PostMapping
     public void store() {
 
     }
