@@ -56483,7 +56483,10 @@ __webpack_require__.r(__webpack_exports__);
 var routes = {
   install: function install(Vue) {
     Vue.prototype.$routes = {
-      login: "/login"
+      login: "/login",
+      todos: {
+        base: "/todos"
+      }
     };
   }
 };

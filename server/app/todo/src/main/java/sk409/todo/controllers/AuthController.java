@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import sk409.todo.forms.RegisterForm;
 import sk409.todo.models.User;
+import sk409.todo.requests.RegisterRequest;
 import sk409.todo.services.UserService;
 
 @Controller
@@ -37,7 +37,7 @@ public class AuthController {
 
     @PostMapping("/register")
     @ResponseBody
-    public User register(@RequestBody RegisterForm registerForm, BindingResult bindingResult) {
+    public User register(@RequestBody RegisterRequest registerForm, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return null;
         }

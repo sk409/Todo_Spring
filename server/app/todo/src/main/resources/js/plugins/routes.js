@@ -1,7 +1,10 @@
 const routes = {
     install(Vue) {
         Vue.prototype.$routes = {
-            login: "/login"
+            login: "/login",
+            todos: {
+                base: "/todos"
+            }
         };
     }
 };

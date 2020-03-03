@@ -1,4 +1,4 @@
-package sk409.todo.forms;
+package sk409.todo.requests;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
@@ -9,7 +9,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class RegisterForm {
+public class RegisterRequest {
 
     @NotNull
     @Size(min = 1, max = 256)

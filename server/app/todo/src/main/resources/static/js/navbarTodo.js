@@ -81,40 +81,21 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/main/resources/js/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/main/resources/js/navbarTodo.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/main/resources/js/app.js":
-/*!**************************************!*\
-  !*** ./src/main/resources/js/app.js ***!
-  \**************************************/
+/***/ "./src/main/resources/js/navbarTodo.js":
+/*!*********************************************!*\
+  !*** ./src/main/resources/js/navbarTodo.js ***!
+  \*********************************************/
 /*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/app.scss */ "./src/main/resources/sass/app.scss");
-/* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_app_scss__WEBPACK_IMPORTED_MODULE_0__);
-// import routes from "./plugins/routes.js";
-// import Vue from "vue";
- // // Vue.use(routes);
-// window.Vue = require("vue");
-// window.Vue.use(routes);
-
-/***/ }),
-
-/***/ "./src/main/resources/sass/app.scss":
-/*!******************************************!*\
-  !*** ./src/main/resources/sass/app.scss ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/app/todo/src/main/resources/js/navbarTodo.js'");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=navbarTodo.js.map
